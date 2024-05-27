@@ -1,0 +1,54 @@
+{
+  "name": "@web-baseline/vite-plugin-vue-style-layer",
+  "version": "0.0.1",
+  "description": "Allow adding layer to style blocks in Vue SFC.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "unbuild",
+    "test:unit": "vitest",
+    "dev": "vite -c vite-playground.config.ts",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "./dist",
+    "./src"
+  ],
+  "peerDependencies": {
+    "postcss": "^8.4.0",
+    "vite": "^5.0.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@stylistic/eslint-plugin": "^1.8.1",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.12.5",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/test-utils": "^2.4.5",
+    "@vue/tsconfig": "^0.5.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "jsdom": "^24.0.0",
+    "npm-run-all2": "^6.1.2",
+    "postcss": "^8.4.38",
+    "typescript": "~5.4.0",
+    "unbuild": "^2.0.0",
+    "vite": "^5.2.8",
+    "vite-plugin-vue-devtools": "^7.0.25",
+    "vitest": "^1.4.0",
+    "vue": "^3.4.21"
+  }
+}

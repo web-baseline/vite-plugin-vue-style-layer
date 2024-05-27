@@ -1,0 +1,12 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "include": [
+    "playground/**/*",
+    "playground/**/*.vue",
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "baseUrl": "."
+  }
+}
