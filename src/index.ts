@@ -1,6 +1,7 @@
 import type { Plugin } from 'vite';
-import { parse, atRule } from 'postcss';
+import { parse } from 'postcss';
 import { relative } from 'path';
+import { transform } from '@web-baseline/postcss-wrap-up-layer/transform';
 
 export interface QueryWithLayer {
   type?: 'script' | 'template' | 'style' | 'custom';
@@ -28,17 +29,14 @@ export default function plugin (opts?: Partial<PluginOptions>): Plugin {
       }
       const path = relative(process.cwd(), filename);
       if (includes instanceof RegExp ? includes.test(path) : includes(path, id)) {
-        const nodes = parse(code).nodes;
-        if (nodes.filter((node) => node.type !== 'comment').length <= 0) {
+        const root = parse(code, { from: id });
+        if (root.nodes.filter((node) => node.type !== 'comment').length <= 0) {
           return;
         }
-        const layer = atRule({
-          name: 'layer',
-          params: query.layer,
-          nodes: nodes,
-        });
+        const transformedNodes = transform(root.nodes, query.layer, root.source);
+        root.nodes = transformedNodes;
         return {
-          code: layer.toString(),
+          code: root.toString(),
           map: null,
         };
       }

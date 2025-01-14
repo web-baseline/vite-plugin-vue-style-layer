@@ -4,7 +4,7 @@
       Count to
     </h1>
     <hr class="col-span-full mb-8" />
-    <input type="text" />
+    <input type="text" class="state" />
   </main>
 </template>
 
@@ -12,6 +12,10 @@
 </script>
 
 <style scoped layer="test">
+@charset "UTF-8";
+/* Test */
+@namespace "http://www.w3.org/1999/xhtml";
+
 /* tes8ssdd */
 
 .state {
