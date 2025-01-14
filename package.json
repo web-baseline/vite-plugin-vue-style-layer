@@ -4,6 +4,13 @@
   "description": "Allow adding layer to style blocks in Vue SFC.",
   "type": "module",
   "license": "MIT",
+  "keywords": [
+    "vite",
+    "vue",
+    "vite-plugin",
+    "css",
+    "css layer"
+  ],
   "scripts": {
     "build": "unbuild",
     "test:unit": "vitest",
@@ -25,6 +32,11 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "author": "TM-SunnyDay <sunnyday@chongying.studio> (https://github.com/TM-SunnyDay/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-baseline/vite-plugin-vue-style-layer"
   },
   "peerDependencies": {
     "postcss": "^8.4.0",

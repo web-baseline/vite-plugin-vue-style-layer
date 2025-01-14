@@ -9,30 +9,32 @@ _✨ 允许 Vue SFC 的 `<style>` 块设置 CSS 级联层 ✨_
 
 ## 功能
 
-Input:  
+为 Vue 添加新的 SFC 语法，允许通过使用 layer 属性添加 [CSS 级联层](https://developer.mozilla.org/docs/Web/CSS/@layer)。
+
+Input:
 
 ```vue
 <style layer="pages">
-/** <main> style */
+/* <main> style */
 main {
   height: 100vh;
 }
-/** <p> style */
+/* <p> style */
 p {
   margin-bottom: 0.2em;
 }
 </style>
 ```
 
-Output:  
+Output:
 
 ```css
 @layer pages {
-  /** <main> style */
+  /* <main> style */
   main {
     height: 100vh;
   }
-  /** <p> style */
+  /* <p> style */
   p {
     margin-bottom: 0.2em;
   }
