@@ -13,7 +13,7 @@ export interface PluginOptions {
 }
 
 export const defaultOptions: PluginOptions = {
-  includes: /^(?!node_modules\/)(?!\.nuxt\/)(?!virtual:).*/,
+  includes: /^(?!node_modules[\\/])(?!\.nuxt[\\/])(?!virtual:).*/,
 };
 
 export default function plugin (opts?: Partial<PluginOptions>): Plugin {

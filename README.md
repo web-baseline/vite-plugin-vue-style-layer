@@ -68,7 +68,7 @@ export default defineConfig({
 
 | Option   | Description      | Type                                                | Default                                           |
 | -------- | ---------------- | --------------------------------------------------- | ------------------------------------------------- |
-| includes | 需要被处理的文件 | `RegExp \| ((path: string, id: string) => boolean)` | `/^(?!node_modules\/)(?!\.nuxt\/)(?!virtual:).*/` |
+| includes | 需要被处理的文件 | `RegExp \| ((path: string, id: string) => boolean)` | `/^(?!node_modules[\\/])(?!\.nuxt[\\/])(?!virtual:).*/` |
 
 
 ## 已知问题
