@@ -1,6 +1,6 @@
 {
   "name": "@web-baseline/vite-plugin-vue-style-layer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Allow adding layer to style blocks in Vue SFC.",
   "type": "module",
   "license": "MIT",
